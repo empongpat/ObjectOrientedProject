@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Blank</title>
+		<script src="js/jquery-2.1.4.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="index-script.js"></script>
+		<link href="webble.css" rel="stylesheet" />
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="header">
+			<div id="logo">
+				<img src="images/Riders+Logo.jpg" />
+			</div>
+			<ul id="nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Products List</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="container">
+				<div id="addPanel">
+					<div class="col-sm-3">
+						<div id="add" onclick="popup('popupAdd');">
+							+
+						</div>
+					</div>
+					<div class="col-sm-3">
+					</div>
+					<div class="col-sm-3">
+					</div>
+					<div class="col-sm-3">
+					</div>
+				</div>
+				<div id="popupOption">
+					<div id="editButton" onclick="editItem(this);">
+						Edit
+					</div>
+					<div id="deleteButton" onclick="removeItem(this);">
+						Del
+					</div>
+				</div>
+				<div id="blanket" style="display:none;">
+				</div>
+				<div id="popupAdd" style="display:none;">
+					<div id="headerBlock">
+						<p style="display:inline-block">Header:</p>
+						<input type="text" name="header" id="headerTitle"><br>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="addType" onclick="chooseType(this);">
+								Image
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="addType" onclick="chooseType(this);">
+								Text
+							</div>
+						</div>
+						<Div class="col-sm-4">
+							<div class="addType" onclick="chooseType(this);">
+								Line
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="addType">
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="addType">
+							</div>
+						</div>
+						<Div class="col-sm-4">
+							<div class="addType">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="addType">
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="addType">
+							</div>
+						</div>
+						<Div class="col-sm-4">
+							<div class="addType">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+						</div>
+						<div class="col-sm-3">
+							<button onclick='addItem(this);' id="addButton">Add</button>
+						</div>
+						<div class="col-sm-3">
+							<button onclick="closePopup('popupAdd')"; id='cancelButton'>Cancel</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>
