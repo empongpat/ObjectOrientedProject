@@ -5,12 +5,71 @@
 		<title>Blank</title>
 		<script src="js/jquery-2.1.4.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="index-script.js"></script>
-		<link href="webble.css" rel="stylesheet" />
+		<script src="blank-script.js"></script>
+		<link href="blank.css" rel="stylesheet" />
 		<link href="css/bootstrap.min.css" rel="stylesheet" />
 	</head>
-	<body>
-		<div id="header">
+	<body onload="determineScreenSize();">
+		<div id="toolbox">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="icon-close" onclick="hideToolbox();">
+						<span class="glyphicon glyphicon-remove"></span>
+					</div>
+				</div>
+			</div>
+			<table class="table">
+				<tbody>
+					<tr class="module">
+						<td>
+							<span class="glyphicon glyphicon-picture"></span>
+							<span class="icon-name">Image</span>
+						</td>
+					</tr>
+					<tr class="module">
+						<td>
+							<span class="glyphicon glyphicon-font"></span>
+							<span class="icon-name">Text</span>
+						</td>
+					</tr>
+					<tr class="module">
+						<td>
+							<span class="glyphicon glyphicon-link"></span>
+							<span class="icon-name">Link</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="row">
+				<div class="col-sm-6">
+				</div>
+			</div>
+		</div>
+		<div id="content">
+			<div class="toolbar">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="icon-menu" onclick="showToolbox();">
+							<span class="glyphicon glyphicon-list"></span>
+							<span class="icon-name">Toolbox</span>
+						</div>
+					</div>
+					<div class="col-sm-6">
+					</div>
+					<div class="col-sm-1">
+						<div class="save">
+							<button type="button" class="btn btn-success btn-md">Save</button>
+						</div>
+					</div>
+					<div class="col-sm-1">
+						<div class="preview">
+							<button type="button" class="btn btn-primary btn-md">Preview</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--<div id="header">
 			<div id="logo">
 				<img src="images/Riders+Logo.jpg" />
 			</div>
@@ -109,6 +168,6 @@
 				</div>
 
 			</div>
-		</div>
+		</div>-->
 	</body>
 </html>
