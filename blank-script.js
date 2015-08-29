@@ -2,7 +2,7 @@ function determineScreenSize(){
  	var height = window.innerHeight;
  	document.getElementById("content").style.height = height+"px";
  	document.getElementById("toolbox").style.height = height+"px";
- 	document.getElementById("webpage").style.height = (height-150)+"px";
+ 	document.getElementById("webpage-frame").style.height = (height-150)+"px";
 }
 
 function showToolbox() {
