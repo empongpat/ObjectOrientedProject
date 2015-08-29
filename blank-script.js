@@ -2,6 +2,7 @@ function determineScreenSize(){
  	var height = window.innerHeight;
  	document.getElementById("content").style.height = height+"px";
  	document.getElementById("toolbox").style.height = height+"px";
+ 	document.getElementById("webpage").style.height = (height-150)+"px";
 }
 
 function showToolbox() {
@@ -16,12 +17,20 @@ function showToolbox() {
 			left: "0px"
 		},200);
 
+		$(".toolbar").animate({
+			left: "0px"
+		},200);
+
 	} else {
 		$("#toolbox").animate({
 			left: "0px"
 		},200);
 
 		$("body").animate({
+			left: "285px"
+		},200);
+
+		$(".toolbar").animate({
 			left: "285px"
 		},200);
 	}
@@ -36,5 +45,9 @@ function hideToolbox() {
 
 	$("body").animate({
 		left: "0px"
+	},200);
+
+	$(".toolbar").animate({
+			left: "0px"
 	},200);
 }

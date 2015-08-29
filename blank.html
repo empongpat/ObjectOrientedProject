@@ -10,6 +10,7 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet" />
 	</head>
 	<body onload="determineScreenSize();">
+		
 		<div id="toolbox">
 			<div class="row">
 				<div class="col-sm-3">
@@ -28,6 +29,12 @@
 					</tr>
 					<tr class="module">
 						<td>
+							<span class="glyphicon glyphicon-film"></span>
+							<span class="icon-name">Video</span>
+						</td>
+					</tr>
+					<tr class="module">
+						<td>
 							<span class="glyphicon glyphicon-font"></span>
 							<span class="icon-name">Text</span>
 						</td>
@@ -36,6 +43,30 @@
 						<td>
 							<span class="glyphicon glyphicon-link"></span>
 							<span class="icon-name">Link</span>
+						</td>
+					</tr>
+					<tr class="module">
+						<td>
+							<span class="glyphicon glyphicon-comment"></span>
+							<span class="icon-name">Comment</span>
+						</td>
+					</tr>
+					<tr class="module">
+						<td>
+							<span class="glyphicon glyphicon-file"></span>
+							<span class="icon-name">Form</span>
+						</td>
+					</tr>
+					<tr class="module">
+						<td>
+							<span class="glyphicon glyphicon-modal-window"></span>
+							<span class="icon-name">Block</span>
+						</td>
+					</tr>
+					<tr class="module">
+						<td>
+							<span class="glyphicon glyphicon-map-marker"></span>
+							<span class="icon-name">Map</span>
 						</td>
 					</tr>
 				</tbody>
@@ -68,106 +99,22 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--<div id="header">
-			<div id="logo">
-				<img src="images/Riders+Logo.jpg" />
+			<div class="edit-area">
+				<div class="col-sm-1">
+				</div>
+				<div class="col-sm-10">
+					<div id="webpage">
+						<div class="edit-box">
+							<div class="icon-edit">
+								<span class="glyphicon glyphicon-wrench"></span>
+							</div>
+							<div class="icon-setting">
+								<span class="glyphicon glyphicon-cog"></span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<ul id="nav">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Products List</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
 		</div>
-		<div class="content">
-			<div class="container">
-				<div id="addPanel">
-					<div class="col-sm-3">
-						<div id="add" onclick="popup('popupAdd');">
-							+
-						</div>
-					</div>
-					<div class="col-sm-3">
-					</div>
-					<div class="col-sm-3">
-					</div>
-					<div class="col-sm-3">
-					</div>
-				</div>
-				<div id="popupOption">
-					<div id="editButton" onclick="editItem(this);">
-						Edit
-					</div>
-					<div id="deleteButton" onclick="removeItem(this);">
-						Del
-					</div>
-				</div>
-				<div id="blanket" style="display:none;">
-				</div>
-				<div id="popupAdd" style="display:none;">
-					<div id="headerBlock">
-						<p style="display:inline-block">Header:</p>
-						<input type="text" name="header" id="headerTitle"><br>
-					</div>
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="addType" onclick="chooseType(this);">
-								Image
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="addType" onclick="chooseType(this);">
-								Text
-							</div>
-						</div>
-						<Div class="col-sm-4">
-							<div class="addType" onclick="chooseType(this);">
-								Line
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="addType">
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="addType">
-							</div>
-						</div>
-						<Div class="col-sm-4">
-							<div class="addType">
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="addType">
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="addType">
-							</div>
-						</div>
-						<Div class="col-sm-4">
-							<div class="addType">
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-						</div>
-						<div class="col-sm-3">
-							<button onclick='addItem(this);' id="addButton">Add</button>
-						</div>
-						<div class="col-sm-3">
-							<button onclick="closePopup('popupAdd')"; id='cancelButton'>Cancel</button>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>-->
 	</body>
 </html>
