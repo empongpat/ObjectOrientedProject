@@ -1,0 +1,246 @@
+#logo {
+	width: 100%;
+	height: auto;
+	background-color: #eeeeee;
+}
+
+#logo img {
+	margin-left: calc(50% - 250px);
+}
+
+#header ul {
+	display: inline-block;
+	list-style-type: none;
+	text-align: center;
+	height: 100px;
+	line-height: 100px;
+}
+
+#header ul li{
+	font-size: 24px;
+	width: 300px;
+	display: inline-block;
+	text-align: center;
+}
+
+#header a {
+	top: 50px;
+	color: white;
+}
+
+#header a:hover {
+	text-decoration: none;
+	color: #e86100;
+}
+
+#nav {
+	height: 100px;
+	width: 100%;
+	background-color: #262626;
+	z-index: 10;
+	margin-bottom: 10px;
+}
+
+.container {
+	height: auto;
+	border: 2px solid black;
+}
+
+
+#addPanel {
+	margin-top: 1em;
+	height: 200px;
+}
+
+#addPanel .col-sm-3 {
+	height: 100%;
+}
+
+.editPanel {
+	margin-top: 1em;
+	border: 1px solid black;
+	height: 200px;
+}
+
+.editPanel:hover {
+	cursor: pointer;
+}
+
+#edit {
+	position: relative;
+	top: calc(100px - 25px);
+	height: 50px;
+	display: inline-block;
+	width: 50px;
+	background-color: #262626;
+}
+
+#edit h3 {
+	display: absolute;
+	color:white;
+	text-align: center;
+}
+
+#edit:hover h3{
+	cursor: pointer;
+	color: #e86100;
+}
+
+#add {
+	position: relative;
+	top: calc(100px - 25px);
+	height: 50px;
+	display: inline-block;
+	width: 50px;
+	background-color: #262626;
+	font-size: 40px;
+	line-height: 50px;
+	color: white;
+	text-align: center;
+
+}
+
+
+#add:hover{
+	cursor: pointer;
+	color: #e86100;
+}
+
+#remove {
+	margin-left: 0.3em;
+	position: relative;
+	top: calc(100px - 25px);
+	height: 50px;
+	display: inline-block;
+	width: 50px;
+	background-color: #262626;
+}
+
+#remove h3 {
+	color:white;
+	text-align: center;
+}
+
+#remove:hover h3{
+	cursor: pointer;
+	color: #e86100;
+}
+
+textarea {
+	width: 100%;
+	height: 80%;
+}
+
+#popupOption {
+	background-color: #262626;
+	border: 1px solid black;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	position: absolute;
+	text-align: center;
+	z-index: 9;
+	opacity: 0;
+}
+
+#popupOption:hover {
+	opacity: 1;
+}
+
+#popupOption:leave {
+
+}
+
+#popupOption div{
+	color:white;
+	text-align: center;
+	display: inline-block;
+	width: 40px;
+}
+
+#popupOption div:hover {
+	cursor: pointer;
+	background-color: #e86100;
+}
+
+
+#blanket {
+	background-color: #111111;
+	opacity: 0.2;
+	*background: none;
+	position: absolute;
+	z-index: 1000;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+#popupAdd {
+	position: absolute;
+	width: 400px;
+	height: 500px;
+	background-color: white;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
+	z-index: 1001;
+}
+
+#headerBlock {
+	margin-top: 1em;
+	text-align: center;
+}
+
+#headerTitle {
+	width: 80%;
+	display: inline-block;
+}
+
+.addType {
+	font-size: 24px;
+	background-color: black;
+	text-align: center;
+	color: white;
+	margin: 1em auto auto auto;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+}
+
+
+.addType:hover {
+	cursor: pointer;
+}
+
+#addButton {
+	margin-top: 1em;
+	float: right;
+}
+
+#cancelButton {
+	margin-top: 1em;
+
+}
+
+.image-upload {
+	height:150px; 
+	z-index:1; 
+	left:46%; 
+	position:absolute;
+}
+
+.image-input:hover {
+	cursor:pointer;
+}
+
+.image-preview {
+	height: 100%;
+}
+
+.line {
+	position: relative;
+	top: 50%;
+	width: 100%;
+	height: 10px;
+	background-color: #e86100;
+}
