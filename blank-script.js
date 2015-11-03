@@ -88,11 +88,6 @@ function drop(e,ev) {
 	}
 }
 
-function allowDrop(e,ev) {
-	ev.preventDefault();
-	e.style.border = "5px dashed #d7f1ff";
-}
-
 function dragLeave(e,ev) {
 	if (dragNode==e) {
 		e.style.color = "white";
@@ -104,4 +99,17 @@ function dragLeave(e,ev) {
 function dragEnd(e,ev) {
 	e.style.opacity = 1.0;
 	e.style.backgroundColor = "black";
+}
+
+function allowDrop(e,ev) {
+	ev.preventDefault();
+	e.style.border = "3px dashed black";
+}
+
+function nodeLeave(e,ev) {
+	e.style.border = "1px dashed black";
+}
+
+function receiveNode(e,ev) {
+	e.style.border = "1px dashed black";
 }
