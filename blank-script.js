@@ -74,6 +74,7 @@ function drag(e,ev) {
 	startY = ev.clientY;
 	ev.dataTransfer.effectAllowed = "move";
 	dragNode = e;
+	dragNode.style.color = "gray";
 }
 
 function drop(e,ev) {
@@ -93,7 +94,11 @@ function allowDrop(e,ev) {
 }
 
 function dragLeave(e,ev) {
-	e.style.backgroundColor = "rgba(26,70,102,0.8)";
+	if (dragNode==e) {
+		e.style.color = "white";
+		e.style.backgroundColor = "rgba(26,70,102,0.8)";
+	}
+	
 }
 
 function dragEnd(e,ev) {
