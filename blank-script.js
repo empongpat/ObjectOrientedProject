@@ -64,6 +64,47 @@ function hideToolbox() {
 	},200);
 }
 
+function uploadImage(input) {
+	var file = input.files[0];
+	var imageType = /image.*/;
+	var parent = input.parentNode;
+	parent.innerHTML = "";
+	var img = new Image();
+	var reader = new FileReader();
+	if (file.type.match(imageType)) {
+		reader.onloadend = function (evt) {
+			img.src = reader.result;
+			parent.parentNode.style.height = "auto";
+			var editPanels = document.getElementsByClassName("col-sm-3");
+			var editPanelWidth = editPanels[0].clientWidth;
+			var imageWidth = 0;
+			img.onload = function(evt) {
+				imageWidth = img.width;
+				if (imageWidth > editPanelWidth) {
+					var oldHeight = img.height;
+					var newHeight = (editPanelWidth/imageWidth)*oldHeight;
+					var newImage = new Image(editPanelWidth,newHeight);
+					newImage.src = img.src;
+					parent.appendChild(newImage);
+
+				} else {
+					parent.appendChild(img);
+				}
+			}
+			
+
+		}
+
+		reader.onerror = function(evt) {
+			console.log("error");
+		}
+		
+		reader.readAsDataURL(file);
+	} else {
+		alert("File not supported.");
+	}
+}
+
 //Drag&Drop functions
 var startX, startY, endX, endY;
 var dragNode;
@@ -81,6 +122,7 @@ function drop(e,ev) {
 	ev.preventDefault;
 	endX = ev.clientX;
 	endY = ev.clientY;
+	console.log(dragNode.getElementsByClassName("icon-name")[0].innerHTML);
 	var data = ev.dataTransfer.getData("text/html");
 	if (e!=dragNode) {
 		dragNode.outerHTML = e.outerHTML;
@@ -112,4 +154,24 @@ function nodeLeave(e,ev) {
 
 function receiveNode(e,ev) {
 	e.style.border = "1px dashed black";
+	var panel = e;
+	switch (dragNode.getElementsByClassName("icon-name")[0].innerHTML) {
+		case "Navigation":
+			console.log("Navigation");
+			break;
+		case "Image":
+			$(e).load("imageModule.html");
+			break;
+		case "Video":
+			console.log("Video");
+			break;
+		case "Text":
+			console.log("Text");
+			break;
+		case "Link":
+			console.log("Link");
+			break;
+		default:
+			break;
+	}
 }
